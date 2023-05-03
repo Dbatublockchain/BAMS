@@ -88,6 +88,22 @@ contract DeadStock {
     roleList.push(r);
   }
 
+  function verifyItem(){
+
+  }
+
+  function createTransaction(){
+
+  }
+
+  function writeOff(){
+
+  }
+
+  function updateLocation(){
+    
+  }
+
   function listUsers() public view returns(address[] memory) {
       return userList;
   }

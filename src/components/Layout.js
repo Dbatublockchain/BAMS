@@ -7,6 +7,10 @@ import WriteOff from "./WriteOff/WriteOff";
 import Member from "./Member/Member";
 import Inspection from "./Inspection/Inspection";
 
+const createTx = () => {
+    const accounts = await Web3.eth.getAccounts();
+    
+}
 
 
 function Layout() {

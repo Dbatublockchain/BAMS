@@ -25,6 +25,7 @@ contract DeadStock {
     string Location;
     address creator;
     uint256 timestamp;  
+    string state;
   }
 
   struct Approval {
@@ -88,20 +89,28 @@ contract DeadStock {
     roleList.push(r);
   }
 
-  function verifyItem(){
-
+  function verifyItem(string memory _hash) public{
+    Transaction storage t = transactionMap[_hash];
+    t.state = "approved";
   }
 
-  function createTransaction(){
-
+  function createTransaction(string memory _id, string memory _hash) public{
+    Transaction storage t = transactionMap[_hash];
+    t.id = _id;
+    t.TranHash = _hash;
+    t.state = "pending";
+    transactionList.push(t);
   }
 
-  function writeOff(){
-
+  function writeOff(string memory _hash, string memory _location) public{
+    Transaction storage t = transactionMap[_hash];
+    t.Location = _location;
+    t.state = "writeof";
   }
 
-  function updateLocation(){
-    
+  function updateLocation(string memory _hash, string memory _location) public{
+    Transaction storage t = transactionMap[_hash];
+    t.Location = _location;
   }
 
   function listUsers() public view returns(address[] memory) {

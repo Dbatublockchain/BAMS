@@ -16,12 +16,15 @@ function App() {
         <div>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Create" element={<Create />} />
-          <Route path="/Update" element={<Update />} />
-          <Route path="/WriteOff" element={<WriteOff />} />
-          <Route path="/Inspection" element={<Inspection />} />
-          <Route path="/Member" element={<Member />} />
+          <Route path="BAMS/" element={<Home />} />
+          <Route path="/BAMS/Create" element={<Create />} />
+          <Route path="/BAMS/Update" element={<Update />} />
+          <Route path="/BAMS/WriteOff" element={<WriteOff />} />
+          <Route path="/BAMS/Update/:hash" element={<Update />} />
+          <Route path="/BAMS/WriteOff/:hash" element={<WriteOff />} />
+          <Route path="/BAMS/Inspection" element={<Inspection />} />
+          <Route path="/BAMS/Inspection/:hash" element={<Inspection />} />
+          <Route path="/BAMS/Member" element={<Member />} />
         </Routes></div>
         </BrowserRouter>
     </div>

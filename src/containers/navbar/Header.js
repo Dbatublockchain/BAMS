@@ -1,5 +1,7 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import Logo from '../../Logo.png'
 
 function Header() {
     return (
@@ -14,7 +16,7 @@ function Header() {
             <Navbar.Brand href="#">
             <img
               alt=""
-              src="/Logo.png"
+              src={Logo}
               width="35"
               height="35"
               className="d-inline-block align-middle"
@@ -24,12 +26,12 @@ function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/Home">Home</Nav.Link>
-                        <Nav.Link href="/Create">Create</Nav.Link>
-                        <Nav.Link href="/Update">Update</Nav.Link>
-                        <Nav.Link href="/WriteOff">Write Off</Nav.Link>
-                        <Nav.Link href="/Inspection">Verification</Nav.Link>
-                        <Nav.Link href="/Member">Member</Nav.Link>
+                        <NavLink style={{color: 'white', marginRight: "1rem"}} to="/BAMS">Home</NavLink>
+                        <NavLink style={{color: 'white', marginRight: "1rem"}} to="/BAMS/Create">Create</NavLink>
+                        <NavLink style={{color: 'white', marginRight: "1rem"}} to="/BAMS/Update">Update</NavLink>
+                        <NavLink style={{color: 'white', marginRight: "1rem"}} to="/BAMS/WriteOff">Write Off</NavLink>
+                        <NavLink style={{color: 'white', marginRight: "1rem"}} to="/BAMS/Inspection">Verification</NavLink>
+                        <NavLink style={{color: 'white', marginRight: "1rem"}} to="/BAMS/Member">Member</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

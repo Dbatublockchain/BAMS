@@ -32,11 +32,19 @@ const Member = () => {
     },
     {
       name: "Head of the Department",
-      role: "HOD",
+      role: "HoD",
     },
     {
-      name: "Registrar",
-      role: "REG",
+      name: "Store Officer",
+      role: "SO",
+    },
+     {
+      name: "Verification Officer",
+      role: "VO",
+    },
+     {
+      name: "Write-off Officer",
+      role: "WO",
     },
   ]);
   const [index, setIndex] = useState(null);
